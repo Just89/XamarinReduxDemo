@@ -11,6 +11,8 @@ Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "XamarinReduxDemo.Store", "X
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{21F01E4A-6887-4B5A-BBB6-E5620B3A4239}"
 EndProject
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "XamarinReduxDemo.Test", "XamarinReduxDemo.Test\XamarinReduxDemo.Test.fsproj", "{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{F69F0FAB-C5F5-4E1D-8101-C523BEB2651A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{F69F0FAB-C5F5-4E1D-8101-C523BEB2651A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{F69F0FAB-C5F5-4E1D-8101-C523BEB2651A}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Release|iPhone.Build.0 = Release|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{0131D25B-9B5A-4628-BBE8-3CB7A7EFFF7C}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{73705DA3-6A6E-4B33-8902-CB8B258C10CF} = {21F01E4A-6887-4B5A-BBB6-E5620B3A4239}
