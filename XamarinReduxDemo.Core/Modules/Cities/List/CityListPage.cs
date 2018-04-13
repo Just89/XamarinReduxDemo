@@ -25,6 +25,12 @@ namespace XamarinReduxDemo.Core.Modules.Cities
             base.OnViewModelSet();
 
             _listView.ItemsSource = ViewModel.Cities;
+
+            ToolbarItems.Add(new ToolbarItem
+            {
+                Text = "Add",
+                Command = ViewModel.AddCommand
+            });
         }
 
         private async void OnItemSelected(object sender, SelectedItemChangedEventArgs arguments)

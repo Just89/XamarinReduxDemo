@@ -2,6 +2,11 @@
 
 let reduceAppState action state = 
     match action with
+    | CityAdded addedCity ->
+        { state with
+            Cities =
+                state.Cities
+                    |> Array.append [|addedCity|] }
     | CityRemoved removedCity -> 
         { state with 
             Cities = 

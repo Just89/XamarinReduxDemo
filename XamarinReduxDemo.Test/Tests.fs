@@ -24,3 +24,37 @@ let ``Can create city test`` () =
 let ``Check state test`` () =
     let state = InitialState.Create()
     Assert.IsType<AppState>(state)
+
+[<Fact>]
+let ``Check remove city from state`` () =
+    let state = InitialState.Create()
+
+    let store = new Store(
+                    state,
+                    RootReducer.Create()
+                ) :> IStore
+               
+
+    let cityToBeRemoved = state.Cities.[0]
+
+    store.Dispatch(StoreAction.CityRemoved(cityToBeRemoved));
+
+    Assert.DoesNotContain(cityToBeRemoved, store.CurrentState.Cities)
+
+[<Fact>]
+let ``Check add city to state`` () =
+     // Arrange
+     let state = InitialState.Create()
+
+     let store = new Store(
+                     state,
+                     RootReducer.Create()
+                 ) :> IStore
+
+     let amsterdam = { City.Id = CityId(020); Name = "Amsterdam"};
+
+     // Act
+     store.Dispatch(StoreAction.CityAdded(amsterdam))
+
+     // Assert 
+     Assert.Contains(amsterdam, store.CurrentState.Cities)

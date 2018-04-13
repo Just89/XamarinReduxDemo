@@ -1,4 +1,5 @@
-﻿using MvvmNano;
+﻿using System;
+using MvvmNano;
 using XamarinReduxDemo.Core.Shared;
 using XamarinReduxDemo.Store;
 
@@ -26,6 +27,22 @@ namespace XamarinReduxDemo.Core.Modules.Cities
         private void OnRemoveCity(City city)
         {
             Store.Dispatch(StoreAction.NewCityRemoved(city));
+        }
+
+        private MvvmNanoCommand<City> _addCommand;
+        public MvvmNanoCommand<City> AddCommand
+            => _addCommand ??
+        ( _addCommand = new MvvmNanoCommand<City>(OnAddCity));
+
+        private void OnAddCity(City city)
+        {
+            var rnd = new Random();
+
+            CityId i = CityId.NewCityId( rnd.Next());
+            var amsterdam = new City(id: i, name: "Amsterdam " + i.Item);
+                
+            //let amsterdam = { City.Id = CityId(020); Name = "Amsterdam"};
+            Store.Dispatch(StoreAction.NewCityAdded(amsterdam));
         }
     }
 }
